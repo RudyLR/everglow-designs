@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Everglow Designs</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="site-header">
+    <div class="brand">Everglow Designs</div>
+
+    <nav class="site-nav" id="mobile-nav" aria-label="Primary navigation">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav">Menu</button>
+</header>
+<main>
+
+    <section class="hero">
+        <p class="eyebrow">Independent Creative Studio</p>
+
+        <h1>
+            Design Things<br>
+            Worth Looking At.
+        </h1>
+    </section>
+<section class="featured-work" id="work">
+
+    <div class="featured-image">
+    <img src="images/famh-concept.jpg"
+         alt="FAMH brand concept artwork featuring pink clouds, a teal sky, and a masked figure">
+</div>
+
+    <div class="project-info">
+       <h2>01 — FAMH</h2>
+<p>Brand Concept / Digital Art</p>
+    </div>
+
+</section>
+<section class="selected-work">
+
+    <h2 class="section-title">Selected Work</h2>
+
+    <article class="project project-02">
+       <div class="project-image">
+    <img
+        src="images/exquisite-corpse.jpg"
+        alt="Exquisite Corpse exhibition poster featuring colorful cutout lettering and a surreal illustrated figure"
+    >
+</div>
+
+        <div class="project-details">
+    <h3>02 — Exquisite Corpse</h3>
+    <p>Exhibition Poster / Graphic Design</p>
+</div>
+    </article>
+    <article class="project project-03">
+   <div class="project-image">
+    <img
+        src="images/preston-bike.jpeg"
+        alt="Preston leaning against a bike at night, illuminated by pink and purple lighting"
+    >
+</div>
+
+    <div class="project-details">
+        <h3>03 — Preston / Night Ride</h3>
+        <p>Photography / Art Direction</p>
+    </div>
+</article>
+
+</section>
+<section class="about" id="about">
+
+    <p class="eyebrow">About Everglow</p>
+
+    <h2 class="about-statement">
+        Everglow is an<br>
+        independent creative<br>
+        studio built around<br>
+        ideas, images &amp; people.
+    </h2>
+
+    <p class="about-copy">
+        Everglow brings design, photography and visual storytelling
+        together to create work with purpose, personality and a human
+        point of view.
+    </p>
+
+</section>
+<section class="capabilities">
+    <h2>Capabilities</h2>
+
+    <div class="capabilities-list">
+        <p>Brand Identity</p>
+        <p>Graphic Design</p>
+        <p>Photography</p>
+        <p>Art Direction</p>
+        <p>Motion + Video</p>
+    </div>
+</section>
+<section class="contact" id="contact">
+
+    <p class="eyebrow">Start a Project</p>
+
+    <h2 class="contact-heading">
+        Have Something<br>
+        Good in Mind?
+    </h2>
+
+    <p class="contact-link">Let's Make It. →</p>
+
+</section>
+
+<footer class="site-footer">
+    <p>
+        Everglow Designs<br>
+        Denver, Colorado
+    </p>
+
+    <p>© 2026</p>
+</footer>
+</main>
+
+<script>
+  const menuButton = document.querySelector(".menu-toggle");
+  const navigation = document.querySelector(".site-nav");
+
+  menuButton.addEventListener("click", () => {
+    const isOpen = menuButton.getAttribute("aria-expanded") === "true";
+
+    menuButton.setAttribute("aria-expanded", String(!isOpen));
+    navigation.classList.toggle("is-open", !isOpen);
+  });
+</script>
+
+</body>
+
+
+</html>
