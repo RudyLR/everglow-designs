@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selected Work | Everglow Designs</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <a class="brand" href="index.html">Everglow Designs</a>
+
+        <nav class="site-nav" id="mobile-nav" aria-label="Primary navigation">
+            <a href="work.html" aria-current="page">Work</a>
+            <a href="index.html#about">About</a>
+            <a href="start.html">Start a Project</a>
+        </nav>
+
+        <button class="menu-toggle" type="button"
+                aria-expanded="false"
+                aria-controls="mobile-nav">
+            Menu
+        </button>
+    </header>
+
+    <main>
+        <section class="hero work-hero">
+            <p class="eyebrow">Everglow Designs / Portfolio</p>
+            <h1>Selected Work.<br>Made With Purpose.</h1>
+            <p class="work-intro">
+                A collection of ideas brought to life through
+                identity, editorial design, photography,
+                and visual storytelling.
+            </p>
+        </section>
+
+        <section class="work-gallery" aria-label="Portfolio projects">
+
+            <article class="work-project">
+                <p class="eyebrow">01 / Brand Identity</p>
+                <img
+    src="images/bam-feature.jpg"
+    alt="BAM Enterprise Center brand identity and logo variations"
+    class="work-image"
+>
+                <h2>BAM</h2>
+                <p>
+                    Identity development, visual systems,
+                    and branded applications.
+                </p>
+            </article>
+
+            <article class="work-project">
+                <p class="eyebrow">02 / Editorial Design</p>
+                <img
+    src="images/talon-feature.jpg"
+    alt="Talon Magazine editorial spread featuring Vyjay"
+    class="work-image"
+>
+                <h2>Talon Magazine</h2>
+                <p>
+                    Editorial layouts, typography,
+                    and visual storytelling.
+                </p>
+            </article>
+
+            <article class="work-project">
+                <p class="eyebrow">03 / Brand Development</p>
+                <img
+    src="images/famh-feature.jpg"
+    alt="FAMH custom rugby shirt featuring embroidered lettering and color-block design"
+    class="work-image"
+>
+                <h2>FAMH</h2>
+                <p>
+                    A creative exploration of identity,
+                    connection, and culture.
+                </p>
+            </article>
+
+            <article class="work-project">
+                <p class="eyebrow">04 / Photography</p>
+                <img
+    src="images/concert-lights.jpg"
+    alt="Blue concert lights illuminating a crowd"
+    class="project-image"
+>
+                <h2>Through My Lens</h2>
+                <p>
+                    A curated collection of people,
+                    places, movement, and moments.
+                </p>
+            </article>
+
+        </section>
+
+        <section class="contact">
+            <p class="eyebrow">Have Something in Mind?</p>
+            <h2 class="contact-heading">
+                Let's Make<br>Something Good.
+            </h2>
+            <a class="contact-link" href="start.html">
+                Start a Project. →
+            </a>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Everglow Designs<br>Denver, Colorado</p>
+        <p>© 2026</p>
+    </footer>
+
+    <script>
+        const menuButton = document.querySelector(".menu-toggle");
+        const navigation = document.querySelector(".site-nav");
+
+        menuButton.addEventListener("click", () => {
+            const isOpen =
+                menuButton.getAttribute("aria-expanded") === "true";
+
+            menuButton.setAttribute(
+                "aria-expanded",
+                String(!isOpen)
+            );
+
+            navigation.classList.toggle("is-open", !isOpen);
+        });
+    </script>
+</body>
+</html>
