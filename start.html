@@ -5,15 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Let's Make It | Everglow Designs</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
+<script src="js/script.js" defer></script>
 </head>
 <body>
    <header class="site-header">
     <a class="brand" href="index.html">Everglow Designs</a>
 
     <nav class="site-nav" id="mobile-nav" aria-label="Primary navigation">
-        <a href="index.html">Home</a>
-        <a href="work.html">Work</a>
-        <a href="start.html" aria-current="page">Let's Make It</a>
+       <a href="work.html">Work</a>
+<a href="index.html#about">About</a>
+<a href="start.html" aria-current="page">Start a Project</a>
     </nav>
 
     <button class="menu-toggle" type="button"
@@ -63,15 +65,8 @@
     <p>© 2026</p>
 </footer>
 <script>
-    const menuButton = document.querySelector(".menu-toggle");
-const navigation = document.querySelector(".site-nav");
 
-menuButton.addEventListener("click", () => {
-    const isOpen = menuButton.getAttribute("aria-expanded") === "true";
 
-    menuButton.setAttribute("aria-expanded", String(!isOpen));
-    navigation.classList.toggle("is-open", !isOpen);
-});
     const projectButtons = document.querySelectorAll(".project-options button");
 
     projectButtons.forEach((button) => {

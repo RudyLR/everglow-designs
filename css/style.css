@@ -27,6 +27,11 @@ h1, h2, h3 {
     align-items: flex-start;
     flex-wrap: wrap;
     padding: 24px;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--color-bg);
 }
 
 .brand {
