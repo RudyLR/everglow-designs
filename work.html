@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Selected Work | Everglow Designs</title>
     <link rel="stylesheet" href="css/style.css">
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
+<script src="js/script.js" defer></script>
+
 </head>
 
 <body>
@@ -47,10 +50,15 @@
     class="work-image"
 >
                 <h2>BAM</h2>
-                <p>
-                    Identity development, visual systems,
-                    and branded applications.
-                </p>
+                
+<p>
+  A brand identity developed for the Bits, Atoms,
+  Molecules (BAM) Innovation Lab. I created the
+  visual system, exploring geometric forms,
+  typography, and color to connect digital design
+  with hands-on fabrication.
+</p>
+
             </article>
 
             <article class="work-project">
@@ -61,10 +69,16 @@
     class="work-image"
 >
                 <h2>Talon Magazine</h2>
-                <p>
-                    Editorial layouts, typography,
-                    and visual storytelling.
-                </p>
+                
+<p>
+  Editorial design for Talon Magazine, combining
+  bold typography, photography, and intentional
+  layouts to bring student stories to life.
+  I designed the cover and feature spreads,
+  balancing visual impact with readability
+  and a consistent editorial identity.
+</p>
+
             </article>
 
             <article class="work-project">
@@ -75,10 +89,17 @@
     class="work-image"
 >
                 <h2>FAMH</h2>
-                <p>
-                    A creative exploration of identity,
-                    connection, and culture.
-                </p>
+               
+<p>
+  An independent clothing and lifestyle brand
+  built around identity, connection, and chosen
+  family. I developed the brand identity,
+  garment concepts, and creative direction,
+  combining heritage-inspired design with
+  contemporary streetwear to tell a story
+  of belonging beyond blood.
+</p>
+
             </article>
 
             <article class="work-project">
@@ -89,11 +110,30 @@
     class="project-image"
 >
                 <h2>Through My Lens</h2>
-                <p>
-                    A curated collection of people,
-                    places, movement, and moments.
-                </p>
+                
+<p>
+  A collection of photography exploring people,
+  places, movement, and everyday moments.
+  Through composition, lighting, and color,
+  I focus on capturing atmosphere and telling
+  stories that go beyond the image itself.
+</p>
+
             </article>
+
+<article class="work-project">
+    <p class="eyebrow">05 / Video &amp; Visual Storytelling</p>
+
+    <video class="work-image" controls preload="metadata" playsinline>
+       <source src="videos/Euro2Morocco-web.mp4" type="video/mp4">
+    </video>
+
+    <h2>Euro2Morocco</h2>
+    <p>
+        A travel film exploring movement, place,
+        and visual storytelling.
+    </p>
+</article>
 
         </section>
 
@@ -113,21 +153,6 @@
         <p>© 2026</p>
     </footer>
 
-    <script>
-        const menuButton = document.querySelector(".menu-toggle");
-        const navigation = document.querySelector(".site-nav");
-
-        menuButton.addEventListener("click", () => {
-            const isOpen =
-                menuButton.getAttribute("aria-expanded") === "true";
-
-            menuButton.setAttribute(
-                "aria-expanded",
-                String(!isOpen)
-            );
-
-            navigation.classList.toggle("is-open", !isOpen);
-        });
-    </script>
+   
 </body>
 </html>
