@@ -744,3 +744,75 @@ margin: 28px 0 16px;
     object-fit: contain;
   }
 }
+
+/* M4A2: ANIMATION */
+
+/* Smooth hover transition for project images */
+.featured-image img,
+.work-project .project-image {
+    transition: transform 0.35s ease;
+}
+
+.featured-image img:hover,
+.work-project .project-image:hover {
+    transform: scale(1.025);
+}
+
+/* Homepage hero entrance animation */
+.hero h1 {
+    animation: heroFadeUp 0.9s ease-out both;
+}
+
+@keyframes heroFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .featured-image img,
+    .work-project .project-image {
+        transition: none;
+    }
+
+    .hero h1 {
+        animation: none;
+    }
+}
+
+/* M4A2: Consistent project image hover */
+.selected-work .project-image img {
+    transition: transform 0.35s ease;
+}
+
+.selected-work .project-image:hover img {
+    transform: scale(1.025);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .selected-work .project-image img {
+        transition: none;
+    }
+}
+
+/* M4A2: Work page image transitions */
+.work-project img {
+    transition: transform 0.35s ease;
+}
+
+.work-project img:hover {
+    transform: scale(1.025);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .work-project img {
+        transition: none;
+    }
+}
