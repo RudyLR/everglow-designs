@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's Make It | Everglow Designs</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+   <header class="site-header">
+    <a class="brand" href="index.html">Everglow Designs</a>
+
+    <nav class="site-nav" id="mobile-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="work.html">Work</a>
+        <a href="start.html" aria-current="page">Let's Make It</a>
+    </nav>
+
+    <button class="menu-toggle" type="button"
+        aria-expanded="false" aria-controls="mobile-nav">
+        Menu
+    </button>
+</header>
+
+<main>
+    <section class="hero">
+        <p class="eyebrow">Everglow Designs / Start Something</p>
+
+        <h1>Got an Idea?<br>Let's Make It Real.</h1>
+    </section>
+    <section class="project-inquiry">
+
+    <p class="eyebrow">The First Step</p>
+
+    <h2 class="inquiry-heading">
+        WHAT ARE WE<br>
+        CREATING?
+    </h2>
+
+    <p class="inquiry-copy">
+        Every good idea starts somewhere. Whether you have
+        everything figured out or just a thought worth exploring,
+        let's see what we can make together.
+    </p>
+
+    <div class="project-options">
+        <button type="button">01 — Brand Identity</button>
+        <button type="button">02 — Graphic Design</button>
+        <button type="button">03 — Photography</button>
+        <button type="button">04 — Something Else</button>
+    </div>
+    <a href="#" class="inquiry-link" id="inquiry-link">
+    Tell Me About It. →
+</a>
+</section>
+</main> 
+<footer class="site-footer">
+    <p>
+        Everglow Designs<br>
+        Denver, Colorado
+    </p>
+
+    <p>© 2026</p>
+</footer>
+<script>
+    const menuButton = document.querySelector(".menu-toggle");
+const navigation = document.querySelector(".site-nav");
+
+menuButton.addEventListener("click", () => {
+    const isOpen = menuButton.getAttribute("aria-expanded") === "true";
+
+    menuButton.setAttribute("aria-expanded", String(!isOpen));
+    navigation.classList.toggle("is-open", !isOpen);
+});
+    const projectButtons = document.querySelectorAll(".project-options button");
+
+    projectButtons.forEach((button) => {
+        button.setAttribute("aria-pressed", "false");
+
+        button.addEventListener("click", () => {
+            projectButtons.forEach((item) => {
+                item.classList.remove("is-selected");
+                item.setAttribute("aria-pressed", "false");
+            });
+
+            button.classList.add("is-selected");
+            button.setAttribute("aria-pressed", "true");
+        });
+    });
+    const inquiryLink = document.querySelector("#inquiry-link");
+
+inquiryLink.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    const selectedButton = document.querySelector(
+        ".project-options button.is-selected"
+    );
+
+    const projectType = selectedButton
+        ? selectedButton.textContent.trim().replace(/^\d+\s*—\s*/, "")
+        : "New Project";
+
+    const subject = encodeURIComponent(
+        "Everglow Designs Inquiry — " + projectType
+    );
+
+    const body = encodeURIComponent(
+        "Hey Everglow,\n\nI have an idea I'd like to discuss.\n\n" +
+        "Here's a little about my project:\n\n"
+    );
+
+    window.location.href =
+        "mailto:everglowdesignllc@gmail.com?subject=" +
+        subject + "&body=" + body;
+});
+</script>
+</body>
+</html>
